@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>HNG - Stage 1 Task</title>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 48;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+      }
+      body{
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .cont {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        align-items: center;
+        text-align: center;
+      }
+      .cont img {
+        padding: 1.5rem;
+        width: 20rem;
+        border-radius: 50%;
+        border: 2px solid #06AEFE;
+      }
+      h1 {
+        font-size: 5rem;
+      }
+      #myTrack {
+        background-color: #000;
+        color: white;
+      }
+      p {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+      a:hover{
+          border-bottom: 1px solid #06AEFE;
+      }
+
+      .currentDate {
+        display: flex;
+      }
+
+      .about{
+          padding: 1rem 0;
+
+      }
+      .footer{
+          /* background-color: #000; */
+          padding: 1rem;
+          width: 100vw;
+          justify-content: center;
+         padding: auto;
+      }
+      .footer img{
+          width: 5rem;
+          text-align: center;
+          margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <!-- MAIN PAGE -->
+  <body>
+    <div class="cont">
+      <img
+        src="./mide.JPG"
+        alt="mide404"
+        data-testid="slackDisplayImage"
+        id="slackDisplayImage"
+      />
+      <h1 data-testid="slackUserName" id="slackUserName">MIDE404</h1>
+      <p class="track" data-testid="myTrack" id="myTrack">Frontend Developer</p>
+      <div class="currentDate">
+        <!-- <span class="material-symbols-outlined"> schedule </span> -->
+        <p
+          class="day"
+          data-testid="currentDayOfTheWeek"
+          id="currentDayOfTheWeek"
+        >
+          Day of the week
+        </p>
+        <p class="time" data-testid="currentUTCTime" id="currentUTCTime">
+          Time
+        </p>
+      </div>
+
+      <a
+        href="https://github.com/mided3v/"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-testid="“githubURL”"
+        id="“githubURL”"
+      >
+        <span class="material-symbols-outlined"> link </span> Github</a
+      >
+
+     <div class="about">
+        My name is Ayomide Oke and I am excited to be on the HNG internship (Frontend Track).
+        I hope to further develop my frontend development skills, jump on challenges and network with people of like minds. 
+    </div>
+    </div>
+    
+    <div class="footer">
+        <img src="./hng-logo.jpeg" alt="hng-logo">
+    </div>
+
+
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+      const day = document.querySelector("#currentDayOfTheWeek");
+      const time = document.querySelector("#currentUTCTime");
+      const weekdays = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const d = new Date();
+      const hour = d.getUTCHours();
+      const minute = d.getUTCMinutes();
+
+      day.textContent = weekdays[d.getDay()] + " " + "|";
+      time.textContent = hour + ":" + minute;
+    </script>
+  </body>
+</html>
