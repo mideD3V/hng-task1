@@ -24,12 +24,14 @@
         box-sizing: border-box;
         font-family: monospace;
       }
-      body{
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
+
       .cont {
         display: flex;
         flex-direction: column;
@@ -37,53 +39,62 @@
         align-items: center;
         text-align: center;
       }
+
       .cont img {
         padding: 1.5rem;
         width: 20rem;
         border-radius: 50%;
-        border: 2px solid #06AEFE;
+        border: 2px solid #06aefe;
       }
+
       h1 {
         font-size: 5rem;
       }
+
       #myTrack {
         background-color: #000;
         color: white;
       }
+
       p {
         display: flex;
         align-items: center;
         padding: 0.5rem;
       }
+
       a {
         color: #000;
         text-decoration: none;
         display: flex;
         align-items: center;
       }
-      a:hover{
-          border-bottom: 1px solid #06AEFE;
+
+      a:hover {
+        border-bottom: 1px solid #06aefe;
       }
 
       .currentDate {
         display: flex;
       }
 
-      .about{
-          padding: 1rem 0;
+      .about {
+        padding: 1rem 0;
+        max-width: 80%;
+        line-height: 1.5;
+      }
 
+      .footer {
+        /* background-color: #000; */
+        padding: 1rem;
+        width: 100vw;
+        justify-content: center;
+        padding: auto;
       }
-      .footer{
-          /* background-color: #000; */
-          padding: 1rem;
-          width: 100vw;
-          justify-content: center;
-         padding: auto;
-      }
-      .footer img{
-          width: 5rem;
-          text-align: center;
-          margin: 0 auto;
+
+      .footer img {
+        width: 5rem;
+        text-align: center;
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -117,24 +128,24 @@
         href="https://github.com/mided3v/"
         target="_blank"
         rel="noopener noreferrer"
-        data-testid="“githubURL”"
-        id="“githubURL”"
+        data-testid="githubURL"
+        id="githubURL”"
       >
-        <span class="material-symbols-outlined"> link </span> Github</a
-      >
+        <span class="material-symbols-outlined"> link </span>
+        Github</a>
 
-     <div class="about">
-        My name is Ayomide Oke and I am excited to be on the HNG internship (Frontend Track).
-        I hope to further develop my frontend development skills, jump on challenges and network with people of like minds. 
+        <br>
+
+      <div class="about">
+        My name is Ayomide Oke and I am excited to be on the HNG internship
+        (Frontend Track). I hope to further develop my frontend development
+        skills, jump on challenges and network with people of like minds.
+      </div>
     </div>
-    </div>
-    
+
     <div class="footer">
-        <img src="./hng-logo.jpeg" alt="hng-logo">
+      <img src="./hng-logo.jpeg" alt="hng-logo" />
     </div>
-
-
-
 
     <!-- JAVASCRIPT -->
     <script>
