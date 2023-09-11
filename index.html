@@ -35,7 +35,7 @@
       .cont {
         display: flex;
         flex-direction: column;
-        padding: 3rem;
+        padding: 0 2rem;
         align-items: center;
         text-align: center;
       }
@@ -85,7 +85,7 @@
 
       .footer {
         /* background-color: #000; */
-        padding: 1rem;
+        padding: 0rem;
         width: 100vw;
         justify-content: center;
         padding: auto;
@@ -163,11 +163,12 @@
         "Saturday",
       ];
       const d = new Date();
-      const hour = d.getUTCHours();
+      const hour = d.getUTCHours() ;
       const minute = d.getUTCMinutes();
 
       day.textContent = weekdays[d.getDay()] + " " + "|";
-      time.textContent = hour + ":" + minute;
+      // time.textContent = hour + ":" + minute;
+      time.textContent = d.getUTCMilliseconds() + 's'
     </script>
   </body>
 </html>
